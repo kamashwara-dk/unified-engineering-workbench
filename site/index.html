@@ -9,16 +9,6 @@
 </head>
 <body>
 
-  <!-- Mandatory Desktop Disclaimer Banner -->
-  <div class="disclaimer-banner" role="alert">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
-      <line x1="12" y1="9" x2="12" y2="13"></line>
-      <line x1="12" y1="17" x2="12.01" y2="17"></line>
-    </svg>
-    <span>This is a project page. The Workbench is a Windows 11 desktop application and cannot run in a browser or on Vercel.</span>
-  </div>
-
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
@@ -32,7 +22,7 @@
           <li><a href="#overview">Overview</a></li>
           <li><a href="#capabilities">Capabilities</a></li>
           <li><a href="#architecture">Architecture</a></li>
-          <li><a href="#results">Verified Results</a></li>
+          <li><a href="#results">Results</a></li>
           <li><a href="#running">Execution</a></li>
           <li><a href="#limitations">Limitations</a></li>
         </ul>
@@ -47,12 +37,16 @@
       <div class="container">
         <span class="hero-tag">Windows 11 Native Instrument</span>
         <h1>Unified Engineering Workbench</h1>
+
+        <!-- Mandatory project note directly under hero title -->
+        <p class="hero-note">Project page: the Workbench is a Windows 11 desktop application, so this page shows screenshots and verified results rather than a live demo.</p>
+
         <p class="hero-lead">
           A high-density desktop engineering environment that couples a low-overhead, native C++17 core engine with an embedded WebGL/React operator console. Built for rapid 3D spatial inspection, finite-element thermal physics, multithreaded parameter sweeps, supervisory embedded hardware control, and gradient-descent mathematical verification.
         </p>
         <div class="hero-meta">
           <div class="hero-meta-item">
-            <strong>Target OS:</strong> Windows 11 (x86-64)
+            <strong>Target OS:</strong> Windows 11 x64
           </div>
           <div class="hero-meta-item">
             <strong>Core Engine:</strong> Pure C++17 (MSVC)
@@ -89,11 +83,11 @@
               <span class="card-badge badge-blue">Host &amp; Runtime</span>
               <h3 class="card-title">1. One-Click Native Host Launch</h3>
               <p class="card-text">
-                Packaged as a self-contained portable distribution. The root <code class="num">Launch.exe</code> acquires a system-wide named Win32 mutex to guarantee single-instance execution, spins up an embedded loopback HTTP server with cryptographically random bearer authentication, and initializes an embedded Microsoft Edge WebView2 frame with automated fallback to the default web browser.
+                Packaged as a self-contained portable distribution. The root <code class="num">Launch.exe</code> uses a Win32 mutex to guarantee single-instance execution, spins up an embedded loopback HTTP server with session authentication via HttpOnly cookie, and initializes an embedded Microsoft Edge WebView2 frame with automated fallback to the default web browser.
               </p>
               <ul class="card-list">
                 <li>Zero-configuration portable execution without installers</li>
-                <li>Named mutex activates and brings existing window to front on duplicate launch</li>
+                <li>Named mutex restores and brings existing window to front on duplicate launch</li>
                 <li>Loopback security token prevents unauthorized local port probing</li>
               </ul>
             </div>
@@ -108,11 +102,11 @@
               <span class="card-badge badge-blue">Spatial Graphics</span>
               <h3 class="card-title">2. 3D Spatial Geometry &amp; Data Inspection</h3>
               <p class="card-text">
-                Interactive Three.js WebGL viewport rendering triangular surface meshes (ASCII STL) and coordinate temperature field point clouds (CSV). Features OrbitControls with WebGL rendering, bounding box envelope calculation, facet normal recomputation, and raycaster-driven coordinate inspection tooltips with continuous color legend mapping. STL files are unitless (conventionally interpreted as metres). The sample CSV dataset is synthetic and not an ANSYS export.
+                Interactive Three.js WebGL viewport rendering triangular surface meshes (ASCII STL) and coordinate temperature field point clouds (CSV). Features OrbitControls with WebGL rendering, bounding box envelope calculation, facet normal recomputation, and raycaster-driven coordinate inspection tooltips with continuous color legend mapping. The sample temperature CSV is synthetic and not an ANSYS export. STL files are unitless (conventionally interpreted as metres).
               </p>
               <ul class="card-list">
                 <li>Strict ASCII STL parser accepting up to 64 MiB and 2,000,000 triangles</li>
-                <li>Instant binary STL detection by header inspection and size formula check</li>
+                <li>Binary STL detection by header inspection and exact size formula matching</li>
                 <li>CSV parser rejecting malformed rows with precise line numbers</li>
               </ul>
             </div>
@@ -121,12 +115,12 @@
           <!-- 3. 1D Thermal FEA -->
           <article class="card">
             <div class="card-media" style="padding: 1.5rem; display: flex; justify-content: center; align-items: center; background: #0f1115;">
-              <svg viewBox="0 0 320 180" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" aria-label="1D Thermal Rod Schematic Diagram">
+              <svg viewBox="0 0 320 180" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" aria-label="1D Thermal Rod Conduction Schematic">
                 <rect x="20" y="70" width="280" height="40" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
                 <line x1="20" y1="50" x2="20" y2="130" stroke="#f59e0b" stroke-width="2"/>
                 <line x1="300" y1="50" x2="300" y2="130" stroke="#38bdf8" stroke-width="2"/>
-                <text x="25" y="45" fill="#f59e0b" font-family="monospace" font-size="11" font-weight="bold">x=0, T(0)</text>
-                <text x="260" y="45" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold">x=L, T(L)</text>
+                <text x="25" y="45" fill="#f59e0b" font-family="monospace" font-size="11" font-weight="bold">x=0, T(0)=100 °C</text>
+                <text x="200" y="45" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold">x=L, T(L)=20 °C</text>
                 <circle cx="20" cy="90" r="4" fill="#f59e0b"/>
                 <circle cx="90" cy="90" r="3" fill="#9da3b4"/>
                 <circle cx="160" cy="90" r="3" fill="#9da3b4"/>
@@ -143,26 +137,39 @@
                 Solves the governing 1-D steady-state heat equation along a conducting rod with internal heat generation subject to Dirichlet boundary conditions at both ends. Assembles element stiffness matrices and load vectors into a tridiagonal global system solved in <code class="num">O(N)</code> time via the Thomas algorithm, directly comparing against exact analytical calculus.
               </p>
               <ul class="card-list">
-                <li>Second-order midpoint convergence verified against the analytical solution</li>
-                <li>Nodal error bounded by machine precision across evaluated meshes</li>
+                <li>Midpoint error shows second-order convergence against the analytical solution</li>
+                <li>Nodal temperature agreement consistent with machine precision across evaluated meshes</li>
                 <li>Dual-trace Plotly.js chart displaying FEA profile and analytical baseline</li>
               </ul>
             </div>
           </article>
 
-          <!-- 4. Multicore Batch Benchmark -->
+          <!-- 4. Multicore Batch Parameter Solver -->
           <article class="card">
-            <div class="card-media">
-              <img src="img/performance_benchmark.png" alt="Multicore batch solver benchmark results table and speedup scaling curves" loading="lazy">
+            <div class="card-media" style="padding: 1.5rem; display: flex; justify-content: center; align-items: center; background: #0f1115;">
+              <svg viewBox="0 0 320 180" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" aria-label="Parallel Batch Dispatch Pipeline Schematic">
+                <rect x="20" y="25" width="280" height="35" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+                <text x="160" y="47" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">Shared Atomic Work Counter</text>
+                <line x1="80" y1="60" x2="60" y2="90" stroke="#525867" stroke-width="1.5"/>
+                <line x1="160" y1="60" x2="160" y2="90" stroke="#525867" stroke-width="1.5"/>
+                <line x1="240" y1="60" x2="260" y2="90" stroke="#525867" stroke-width="1.5"/>
+                <rect x="25" y="90" width="70" height="30" rx="3" fill="#202228" stroke="#10b981" stroke-width="1"/>
+                <text x="60" y="109" fill="#10b981" font-family="monospace" font-size="10" text-anchor="middle">Worker 1</text>
+                <rect x="125" y="90" width="70" height="30" rx="3" fill="#202228" stroke="#10b981" stroke-width="1"/>
+                <text x="160" y="109" fill="#10b981" font-family="monospace" font-size="10" text-anchor="middle">Worker 2</text>
+                <rect x="225" y="90" width="70" height="30" rx="3" fill="#202228" stroke="#10b981" stroke-width="1"/>
+                <text x="260" y="109" fill="#10b981" font-family="monospace" font-size="10" text-anchor="middle">Worker 4</text>
+                <text x="160" y="150" fill="#9da3b4" font-family="sans-serif" font-size="10" text-anchor="middle">Preallocated Contiguous Slots &bull; Bitwise Serial Agreement</text>
+              </svg>
             </div>
             <div class="card-body">
               <span class="card-badge badge-green">Parallel Computing</span>
               <h3 class="card-title">4. Multicore Batch Parameter Solver</h3>
               <p class="card-text">
-                Evaluates large parametric batches of independent FEA heat conduction problems across configurable <code class="num">std::thread</code> worker pools using a shared atomic counter for dispatch. Includes an advisory workload calibrator, high-resolution steady clock timing bracketing worker pools, and automated Speedup / Parallel Efficiency computation.
+                Evaluates parametric batches of independent FEA heat conduction problems across configurable <code class="num">std::thread</code> worker pools using a shared atomic work counter for dynamic dispatch. Includes an advisory workload calibrator, high-resolution steady clock timing bracketing worker pools, and automated Speedup / Parallel Efficiency computation.
               </p>
               <ul class="card-list">
-                <li>Deterministic SplitMix64 pseudo-random parameter generator across all platforms</li>
+                <li>Deterministic SplitMix64 pseudo-random parameter generator across standard libraries</li>
                 <li>Zero numerical deviation (<code class="num">|ΔT| = 0.0 °C</code>) across all parallel workers</li>
                 <li>Atomic export of benchmark runs to standardized CSV and JSON formats</li>
               </ul>
@@ -178,11 +185,11 @@
               <span class="card-badge badge-simulated">SIMULATED System</span>
               <h3 class="card-title">5. Supervisory Embedded Control &amp; Telemetry</h3>
               <p class="card-text">
-                Supervises three target embedded devices: an Espressif ESP32 MCU, a Digilent Arty A7 FPGA, and an Olimex ARM-USB-TINY-H JTAG adapter. Simulates connection lifecycle state transitions, on-demand telemetry sampling via REST API, and deliberate fault injection (timeout triggering, fault state transition, exponential backoff retries, and clean recovery).
+                Supervises three target embedded devices: an Espressif ESP32 MCU, a Digilent Arty A7 FPGA, and an Olimex ARM-USB-TINY-H JTAG adapter. Simulates connection lifecycle state transitions, on-demand telemetry sampling via REST API, and deliberate fault injection (timeout triggering, fault state transition, supervisory retries, and clean recovery).
               </p>
               <ul class="card-list">
                 <li>Unmissable persistent <code class="num">SIMULATED</code> badges on every card, message, and log</li>
-                <li>Event timeline recording millisecond-accurate timestamps for state changes</li>
+                <li>Event timeline recording timestamps for state changes</li>
                 <li>Simulated timeout trigger proving automatic supervisory fault recovery</li>
               </ul>
             </div>
@@ -191,7 +198,7 @@
           <!-- 6. Backpropagation Gradient Verification -->
           <article class="card">
             <div class="card-media" style="padding: 1.5rem; display: flex; justify-content: center; align-items: center; background: #0f1115;">
-              <svg viewBox="0 0 320 180" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" aria-label="Single-Neuron Computation Graph">
+              <svg viewBox="0 0 320 180" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" aria-label="Single-Neuron Computation Flow Schematic">
                 <circle cx="40" cy="90" r="18" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
                 <text x="40" y="95" fill="#38bdf8" font-family="monospace" font-size="12" text-anchor="middle">x</text>
                 <line x1="58" y1="90" x2="110" y2="90" stroke="#525867" stroke-width="1.5"/>
@@ -215,9 +222,9 @@
                 Non-linear regression engine for a single-neuron architecture (<code class="num">h = tanh(w·x + b)</code>, <code class="num">y_hat = v·h + c</code>, <code class="num">J = 0.5·(y_hat - y)²</code>). Computes analytical chain-rule gradients and verifies that gradients agree with central differences within the required tolerance (<code class="num">ε = 10⁻⁶</code>, <code class="num">|Δ| ≤ 10⁻⁵</code>), followed by simultaneous gradient descent iterations.
               </p>
               <ul class="card-list">
-                <li>Gradients agree with central differences within the required tolerance</li>
+                <li>Analytic gradients agree with central differences within the required tolerance</li>
                 <li>Simultaneous multi-parameter update evaluates all gradients from original state</li>
-                <li>Loss decreases monotonically across 101 gradient descent steps</li>
+                <li>Loss decreases monotonically across gradient descent iterations</li>
               </ul>
             </div>
           </article>
@@ -275,7 +282,7 @@
               <text x="50" y="263" fill="#9da3b4" font-size="11">ShellExecuteW default browser</text>
 
               <rect x="35" y="290" width="230" height="45" rx="5" fill="#15161a" stroke="#2e313a" stroke-width="1"/>
-              <text x="50" y="318" fill="#646a7c" font-size="11">Token Generator (Crypto Random)</text>
+              <text x="50" y="318" fill="#646a7c" font-size="11">Token Generator (128-bit Random)</text>
 
               <!-- Arrow Host to Core -->
               <path d="M 280 190 L 340 190" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
@@ -287,7 +294,7 @@
 
               <rect x="365" y="80" width="250" height="50" rx="5" fill="#18191e" stroke="#0284c7" stroke-width="1"/>
               <text x="380" y="103" fill="#f0f2f5" font-weight="600">Loopback HTTP Server</text>
-              <text x="380" y="120" fill="#9da3b4" font-size="11">cpp-httplib | Ephemeral Port | Bearer Auth</text>
+              <text x="380" y="120" fill="#9da3b4" font-size="11">cpp-httplib | Ephemeral Port | Cookie Auth</text>
 
               <rect x="365" y="140" width="250" height="45" rx="5" fill="#202228" stroke="#3e434f" stroke-width="1"/>
               <text x="380" y="162" fill="#f0f2f5" font-weight="600">1D Thermal FEA Solver</text>
@@ -295,7 +302,7 @@
 
               <rect x="365" y="195" width="250" height="45" rx="5" fill="#202228" stroke="#3e434f" stroke-width="1"/>
               <text x="380" y="217" fill="#f0f2f5" font-weight="600">Parallel Batch Thread Pool</text>
-              <text x="380" y="232" fill="#9da3b4" font-size="11">Shared Atomic Counter + SplitMix64</text>
+              <text x="380" y="232" fill="#9da3b4" font-size="11">Shared Atomic Work Counter</text>
 
               <rect x="365" y="250" width="250" height="45" rx="5" fill="#202228" stroke="#3e434f" stroke-width="1"/>
               <text x="380" y="272" fill="#f0f2f5" font-weight="600">Supervisory Device Mocks</text>
@@ -333,7 +340,7 @@
             </svg>
           </div>
           <p class="card-text" style="margin-top: 1rem;">
-            Communication between the WebGL operator console and the native engine occurs exclusively over loopback sockets (<code class="num">127.0.0.1</code>) on an operating system-assigned ephemeral port. A 128-bit per-launch session token (32 lowercase hex characters) prevents cross-origin or local process intrusion.
+            Communication between the WebGL operator console and the native engine occurs exclusively over loopback sockets (<code class="num">127.0.0.1</code>) on an operating system-assigned ephemeral port. A 128-bit session authentication token passed via HttpOnly cookie prevents cross-origin or local process intrusion.
           </p>
         </div>
 
@@ -356,7 +363,7 @@
       <div class="container">
         <div class="section-header">
           <div class="section-label">Empirical Verification</div>
-          <h2 class="section-title">Verified Benchmark &amp; Physics Results</h2>
+          <h2 class="section-title">Benchmark &amp; Verification Summaries</h2>
           <p class="section-desc">
             Numerical benchmarks are quoted directly from test execution documentation recorded in the repository. Worked analytical values and gradient tables are redacted in accordance with evaluation guidelines.
           </p>
@@ -366,19 +373,19 @@
         <div class="card" style="margin-bottom: 2rem; padding: 1.5rem;">
           <h3 class="card-title">1. Finite Element Thermal Convergence Verification <span class="source-tag">Source: results/convergence.csv</span></h3>
           <p class="card-text">
-            Formulation evaluated for steady-state rod heat conduction with exact parameters: rod length <code class="num">L = 1.0 m</code>, cross-sectional area <code class="num">A = 1e-4 m²</code>, thermal conductivity <code class="num">k = 10.0 W/(m·K)</code>, volumetric heat generation <code class="num">q = 10,000 W/m³</code>, and Dirichlet boundary temperatures <code class="num">T(0) = 100.0 °C</code> and <code class="num">T(L) = 20.0 °C</code>.
+            Formulation evaluated for steady-state rod heat conduction with exact parameters: rod length <code class="num">L = 1 m</code>, cross-sectional area <code class="num">A = 1e-4 m^2</code>, thermal conductivity <code class="num">k = 10 W/(m K)</code>, volumetric heat generation <code class="num">q = 10,000 W/m^3</code>, and Dirichlet boundary temperatures <code class="num">T(0) = 100 C</code> and <code class="num">T(L) = 20 C</code>.
           </p>
           <ul class="card-list" style="border-top: none; padding-top: 0;">
-            <li><strong>Second-order midpoint convergence verified against the analytical solution:</strong> Discretization error measured at element midpoints converges at the theoretical quadratic rate across successive mesh refinements (<code class="num">N = 10, 20, 40, 80</code> elements).</li>
-            <li><strong>Nodal Agreement:</strong> Due to linear element formulation with constant source terms, the finite element solution matches the exact analytical Dirichlet solution at mesh nodes, with maximum nodal error bounded by machine precision (<code class="num">1.14 × 10⁻¹² °C</code> across all meshes).</li>
+            <li><strong>Midpoint error shows second-order convergence against the analytical solution:</strong> Discretization error measured at element midpoints converges at the theoretical quadratic rate across successive mesh refinements (<code class="num">N = 10, 20, 40, 80</code> elements).</li>
+            <li><strong>Nodal Agreement:</strong> Due to linear element formulation with constant source terms, the finite element solution matches the exact analytical Dirichlet solution at mesh nodes within machine precision.</li>
           </ul>
         </div>
 
         <!-- Section 2: Multicore Benchmark -->
         <div class="card" style="margin-bottom: 2rem; padding: 1.5rem;">
-          <h3 class="card-title">2. Multicore Parallel Batch Benchmark Scaling <span class="source-tag">Source: docs/REPORT.md &amp; docs/PERFORMANCE_NOTES.md</span></h3>
+          <h3 class="card-title">2. Multicore Parallel Batch Benchmark Scaling <span class="source-tag">Source: docs/PERFORMANCE_NOTES.md</span></h3>
           <p class="card-text">
-            Measured on <strong>AMD Ryzen 7 5800H</strong> (8 physical cores, 16 logical threads, 3.2 GHz base / 4.4 GHz boost), 16 GB DDR4 RAM, running on Windows 11 (x86-64), compiled with MSVC 19.44 Release build (<code class="num">/O2 /Oi /Ot /Oy /GL</code>). Workload: <strong>50,000 independent rod cases</strong> (<code class="num">N = 10</code> elements, 11 nodes per case, total 550,000 solved nodes per repetition). Case generation time (<code class="num">78.51 ms</code>) is strictly excluded from compute timing. Exactly 1 warm-up run precedes 5 measured repetitions per worker count.
+            Measured on <strong>AMD Ryzen 7 5800H</strong> (8 physical cores, 16 logical threads, 3.2 GHz base / 4.4 GHz boost), 16 GB DDR4 RAM (15.34 GiB), running on Windows, compiled with MSVC 19.44 Release build (<code class="num">/O2 /Oi /Ot /Oy /GL</code>). Workload: <strong>50,000 independent rod cases</strong> (<code class="num">N = 10</code> elements, 11 nodes per case, total 550,000 solved nodes per repetition). Case generation time (<code class="num">78.51 ms</code>) is strictly excluded from compute timing. Exactly 1 warm-up run (42.59 ms) precedes 5 measured repetitions per worker count.
           </p>
           <div class="table-wrapper">
             <table>
@@ -437,7 +444,7 @@
             </table>
           </div>
           <p class="card-text" style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;">
-            <em>Analysis:</em> Workload distribution utilizes a shared atomic counter loop (<code class="num">std::atomic&lt;size_t&gt;::fetch_add</code>) with contiguous memory preallocation. Thread pool lifecycle overhead (<code class="num">std::thread</code> creation and join) is included in measured durations. Maximum numerical difference between parallel and serial execution was exactly <code class="num">0.000000 °C</code> across all 550,000 nodes. Launch-to-ready time is tracked separately at startup as a protocol metric and excluded from solver compute metrics.
+            <em>Analysis:</em> Workload distribution utilizes a shared atomic work counter loop (<code class="num">std::atomic&lt;size_t&gt;::fetch_add</code>) with contiguous memory preallocation. Thread pool lifecycle overhead (<code class="num">std::thread</code> creation and join) is included in measured durations. Maximum numerical difference between parallel and serial execution was exactly <code class="num">0.000000 °C</code> across all 550,000 nodes. The per-repetition time is short (tens of milliseconds) so timings are noisy and speedups are workload-specific. Launch-to-ready duration is tracked from process start to listener initialization as a host protocol metric, but is not recorded in the solver compute results.
           </p>
         </div>
 
@@ -445,12 +452,12 @@
         <div class="card" style="padding: 1.5rem;">
           <h3 class="card-title">3. Backpropagation Gradient Verification <span class="source-tag">Source: docs/BACKPROP_NOTES.md</span></h3>
           <p class="card-text">
-            Evaluated on a single-neuron regression model (<code class="num">x = 1.0</code>, <code class="num">y = 2.0</code>, <code class="num">h = tanh(w·x + b)</code>, <code class="num">y_hat = v·h + c</code>, loss <code class="num">J = 0.5·(y_hat - y)²</code>) with initial weights and biases <code class="num">w = 0.5</code>, <code class="num">b = 0.0</code>, <code class="num">v = 1.0</code>, <code class="num">c = 0.0</code> and learning rate <code class="num">η = 0.1</code>.
+            Evaluated on a single-neuron regression model (<code class="num">x = 1.0</code>, <code class="num">y = 2.0</code>, <code class="num">h = tanh(w·x + b)</code>, <code class="num">y_hat = v·h + c</code>, loss <code class="num">J = 0.5·(y_hat - y)²</code>) with initial parameters <code class="num">w = 0.5</code>, <code class="num">b = 0.0</code>, <code class="num">v = 1.0</code>, <code class="num">c = 0.0</code> and learning rate <code class="num">η = 0.1</code>.
           </p>
           <ul class="card-list" style="border-top: none; padding-top: 0;">
-            <li><strong>Central-Difference Gradient Check:</strong> Gradients agree with central differences within the required tolerance across all four parameters (<code class="num">ε = 10⁻⁶</code>, absolute error <code class="num">|Δ| ≤ 10⁻⁵</code>).</li>
+            <li><strong>Central-Difference Gradient Check:</strong> Analytic gradients agree with central differences within the required tolerance; the loss plot and raw CSV are in the project's results folder.</li>
             <li><strong>Simultaneous Parameter Updates:</strong> Simultaneous gradient descent updates evaluate all parameter gradients from the original point before updating weights and biases, preventing sequential mutation discrepancies.</li>
-            <li><strong>Training Convergence:</strong> Loss decreases monotonically across 101 gradient descent steps.</li>
+            <li><strong>Training Convergence:</strong> Loss decreases monotonically across gradient descent iterations.</li>
           </ul>
         </div>
 
@@ -473,14 +480,13 @@
           <div class="guide-panel">
             <h3>Prerequisites &amp; Compatibility</h3>
             <ul class="steps-list" style="list-style: none; padding-left: 0;">
-              <li><strong>Operating System:</strong> 64-bit Windows 11.</li>
-              <li><strong>Runtime Component:</strong> Microsoft Edge WebView2 Runtime (pre-installed by default on modern Windows installations).</li>
-              <li><strong>Graphics Driver:</strong> WebGL 2.0 compatible display driver.</li>
-              <li><strong>Admin Rights:</strong> Not required. Runs entirely within standard user privileges.</li>
+              <li><strong>Target OS:</strong> Windows 11 x64.</li>
+              <li><strong>Runtime Component:</strong> Microsoft Edge WebView2 Runtime (preinstalled on Windows 11; fallback to default browser via Win32 ShellExecuteW if missing).</li>
+              <li><strong>Admin Rights:</strong> No administrator rights required (runs entirely within standard user permissions).</li>
             </ul>
 
             <div class="callout callout-info">
-              <strong>Single-Instance Mutex:</strong> If <code class="num">Launch.exe</code> is executed while an existing instance is active, the secondary process detects the Win32 named mutex, brings the existing window to the foreground, and exits immediately.
+              <strong>Single-Instance Behavior:</strong> If <code class="num">Launch.exe</code> is executed while an existing instance is active, the secondary process detects the Win32 mutex, restores and brings the existing window to the foreground, and exits cleanly.
             </div>
           </div>
 
@@ -531,7 +537,7 @@
               <span class="source-tag">64 MiB / 2M Triangles</span>
             </div>
             <div class="limit-desc">
-              The 3D geometry parser strictly accepts ASCII STL up to 64 MiB and 2,000,000 facets to prevent memory allocation spikes. Files detected as Binary STL (by inspecting the 80-byte header and matching the file size against the declared triangle count) are rejected with an explicit prompt to re-export as ASCII STL.
+              The 3D geometry parser strictly accepts ASCII STL up to 64 MiB and 2,000,000 facets to prevent memory allocation spikes. Files detected as Binary STL (by inspecting the 80-byte header and matching the file size against the declared triangle count formula) are rejected with an explicit prompt to re-export as ASCII STL.
             </div>
           </div>
 
@@ -551,7 +557,7 @@
               <span class="source-tag">127.0.0.1 Ephemeral Port</span>
             </div>
             <div class="limit-desc">
-              The host shell communicates with the core engine over loopback TCP using an ephemeral port and bearer authentication. Under standard Windows 11 desktop execution, loopback binding operates within standard user privileges without requiring network elevation.
+              The host shell communicates with the core engine over loopback TCP using an ephemeral port and session cookie authentication. In environments that block loopback sockets the app may fail to start and shows an error message.
             </div>
           </div>
 
@@ -561,7 +567,7 @@
               <span class="source-tag">SIMULATED Software Mocks</span>
             </div>
             <div class="limit-desc">
-              MCU, FPGA, and JTAG adapters in the Hardware view are high-fidelity software state machines designed to test connection lifecycles, fault handling, and supervisory backoff recovery. The system does not bundle physical FTDI or WinUSB kernel drivers, and all telemetry cards are persistently badged SIMULATED.
+              MCU, FPGA, and JTAG adapters in the Hardware view are high-fidelity software state machines designed to test connection lifecycles, fault handling, and supervisory recovery. The system does not bundle physical FTDI or WinUSB kernel drivers, and all telemetry cards are persistently badged SIMULATED.
             </div>
           </div>
 
