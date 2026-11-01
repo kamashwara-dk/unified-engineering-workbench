@@ -78,7 +78,7 @@ foreach ($ext in $forbiddenExtensions) {
 }
 
 # Forbidden directories
-$forbiddenDirs = @("node_modules", ".vs", "build", "CMakeFiles")
+$forbiddenDirs = @("node_modules", ".vs", "build", "CMakeFiles", "site")
 foreach ($d in $forbiddenDirs) {
     $foundDirs = Get-ChildItem $dist -Recurse -Directory -Filter $d -ErrorAction SilentlyContinue
     foreach ($fd in $foundDirs) {

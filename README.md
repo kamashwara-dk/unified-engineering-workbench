@@ -235,6 +235,7 @@ Workbench/
 │   ├── TRACEABILITY.md    # Requirements traceability matrix (Req A1 - Z6)
 │   └── UI_DESIGN.md       # Visual tokens, type scale, and styling guide
 ├── results/               # Generated test outputs (backprop.csv, convergence data)
+├── site/                  # Static Vercel showcase project page (excluded from submission ZIP)
 ├── src/
 │   ├── core/              # Pure C++17 library (FEA, STL/CSV, batch, devices, backprop)
 │   ├── host/              # Win32 host executable embedding WebView2 (Launch.exe)

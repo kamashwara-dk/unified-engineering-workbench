@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Unified Engineering Workbench -- Windows 11 desktop instrument integrating 3D geometry inspection, 1D thermal FEA, multicore batch processing, simulated hardware telemetry, and backpropagation verification.">
+  <title>Unified Engineering Workbench -- Project Showcase &amp; Verification</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Mandatory Desktop Disclaimer Banner -->
+  <div class="disclaimer-banner" role="alert">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+      <line x1="12" y1="9" x2="12" y2="13"></line>
+      <line x1="12" y1="17" x2="12.01" y2="17"></line>
+    </svg>
+    <span>This is a project page. The Workbench is a Windows 11 desktop application and cannot run in a browser or on Vercel.</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <div class="brand-icon" aria-hidden="true">W</div>
+        <span class="brand-title">Unified Engineering Workbench</span>
+        <span class="brand-badge">v1.0.0</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#results">Verified Results</a></li>
+          <li><a href="#running">Execution</a></li>
+          <li><a href="#limitations">Limitations</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero Section -->
+    <section class="hero" id="overview">
+      <div class="container">
+        <span class="hero-tag">Windows 11 Native Instrument</span>
+        <h1>Unified Engineering Workbench</h1>
+        <p class="hero-lead">
+          A high-density desktop engineering environment that couples a low-overhead, native C++17 core engine with an embedded WebGL/React operator console. Built for rapid 3D spatial inspection, finite-element thermal physics, multithreaded parameter sweeps, supervisory embedded hardware control, and gradient-descent mathematical verification.
+        </p>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <strong>Target OS:</strong> Windows 11 (x86-64)
+          </div>
+          <div class="hero-meta-item">
+            <strong>Core Engine:</strong> Pure C++17 (MSVC / Clang / GCC)
+          </div>
+          <div class="hero-meta-item">
+            <strong>UI Shell:</strong> Microsoft Edge WebView2 + WebGL
+          </div>
+          <div class="hero-meta-item">
+            <strong>Distribution:</strong> Portable zero-install ZIP with root <code class="num">Launch.exe</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Six Core Capabilities -->
+    <section class="section" id="capabilities">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Core Capabilities</div>
+          <h2 class="section-title">Six Integrated Engineering Domains</h2>
+          <p class="section-desc">
+            The Workbench consolidates spatial validation, numerical physics, parallel compute, hardware telemetry, and analytical derivation verification into a single unified desktop workflow.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+
+          <!-- 1. Launch & Host Architecture -->
+          <article class="card">
+            <div class="card-media">
+              <img src="img/stl_3d_render.png" alt="Workbench Desktop Interface showing 3D geometry and native dark-theme layout" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-badge badge-blue">Host &amp; Runtime</span>
+              <h3 class="card-title">1. One-Click Native Host Launch</h3>
+              <p class="card-text">
+                Packaged as a self-contained portable distribution. The root <code class="num">Launch.exe</code> acquires a system-wide named Win32 mutex (<code class="num">Local\Workbench_App_Instance_Mutex</code>) to guarantee single-instance execution, spins up an embedded loopback HTTP server with cryptographically random bearer authentication, and initializes an embedded Microsoft Edge WebView2 frame with automated fallback to the default web browser.
+              </p>
+              <ul class="card-list">
+                <li>Zero-configuration portable execution without installers</li>
+                <li>Named mutex activates and brings existing window to front on duplicate launch</li>
+                <li>Loopback security token prevents unauthorized local port probing</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 2. STL & CSV Geometry Visualisation -->
+          <article class="card">
+            <div class="card-media">
+              <img src="img/csv_point_cloud.png" alt="Interactive 3D point cloud inspect with spatial tooltip and temperature legend" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-badge badge-blue">Spatial Graphics</span>
+              <h3 class="card-title">2. 3D Spatial Geometry &amp; Data Inspection</h3>
+              <p class="card-text">
+                Interactive Three.js WebGL viewport rendering triangular surface meshes (ASCII STL) and coordinate temperature field point clouds (CSV). Features hardware-accelerated OrbitControls, bounding box envelope calculation, facet normal recomputation, and raycaster-driven coordinate inspection tooltips with continuous color legend mapping.
+              </p>
+              <ul class="card-list">
+                <li>Strict ASCII STL parser accepting up to 64 MiB and 2,000,000 triangles</li>
+                <li>Instant binary STL detection with actionable format guidance</li>
+                <li>CSV parser rejecting malformed rows with precise line numbers</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 3. 1D Thermal FEA -->
+          <article class="card">
+            <div class="card-media">
+              <img src="img/thermal_analysis.png" alt="1D thermal finite element analysis results with temperature profile and analytical comparison" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-badge badge-green">Finite Element Physics</span>
+              <h3 class="card-title">3. 1-D Steady-State Thermal FEA</h3>
+              <p class="card-text">
+                Solves the governing 1-D steady-state heat equation along a conducting rod with internal heat generation subject to Dirichlet boundary conditions at both ends. Assembles element stiffness matrices and load vectors into a tridiagonal global system solved in <code class="num">O(N)</code> time via the Thomas algorithm, directly comparing against exact analytical calculus.
+              </p>
+              <ul class="card-list">
+                <li>Machine-precision nodal agreement (<code class="num">&lt; 10⁻¹² °C</code>) for linear elements</li>
+                <li>Exact quadratic midpoint convergence exhibiting second-order rate (<code class="num">O(h²)</code>)</li>
+                <li>Dual-trace Plotly.js chart displaying FEA profile and analytical baseline</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 4. Multicore Batch Benchmark -->
+          <article class="card">
+            <div class="card-media">
+              <img src="img/performance_benchmark.png" alt="Multicore batch solver benchmark results table and speedup scaling curves" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-badge badge-green">Parallel Computing</span>
+              <h3 class="card-title">4. Multicore Batch Parameter Solver</h3>
+              <p class="card-text">
+                Evaluates large parametric batches of independent FEA heat conduction problems across configurable <code class="num">std::thread</code> worker pools using lock-free atomic index retrieval. Includes an advisory workload calibrator, high-resolution steady clock timing bracketing worker pools, and automated Speedup / Parallel Efficiency computation.
+              </p>
+              <ul class="card-list">
+                <li>Deterministic SplitMix64 pseudo-random parameter generator across all platforms</li>
+                <li>Zero numerical deviation (<code class="num">|ΔT| = 0.0 °C</code>) across all parallel workers</li>
+                <li>Atomic export of benchmark runs to standardized CSV and JSON formats</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 5. Embedded Telemetry (SIMULATED) -->
+          <article class="card">
+            <div class="card-media">
+              <img src="img/hardware_simulated.png" alt="Hardware view displaying MCU, FPGA, and JTAG cards clearly tagged SIMULATED" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-badge badge-simulated">SIMULATED System</span>
+              <h3 class="card-title">5. Supervisory Embedded Control &amp; Telemetry</h3>
+              <p class="card-text">
+                Supervises three target embedded devices: an Espressif ESP32 MCU, a Digilent Arty A7 FPGA, and an Olimex ARM-USB-TINY-H JTAG adapter. Simulates connection lifecycle state transitions, periodic sensor telemetry streaming, and deliberate fault injection (timeout triggering, fault state transition, exponential backoff retries, and clean recovery).
+              </p>
+              <ul class="card-list">
+                <li>Unmissable persistent <code class="num">SIMULATED</code> badges on every card, message, and log</li>
+                <li>Event timeline recording millisecond-accurate timestamps for state changes</li>
+                <li>Simulated timeout trigger proving automatic supervisory fault recovery</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 6. Backpropagation Gradient Verification -->
+          <article class="card">
+            <div class="card-media">
+              <img src="img/backprop_learning.png" alt="Backpropagation training loss curve and gradient check results table" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-badge badge-blue">Gradient Calculus</span>
+              <h3 class="card-title">6. Backpropagation Gradient Verification</h3>
+              <p class="card-text">
+                Non-linear regression engine for a single-neuron architecture (<code class="num">h = tanh(w·x + b)</code>, <code class="num">y_hat = v·h + c</code>, <code class="num">J = 0.5·(y_hat - y)²</code>). Computes analytical chain-rule gradients and verifies them against independent central-difference numerical evaluations (<code class="num">ε = 10⁻⁶</code>) within tight tolerance (<code class="num">|Δ| ≤ 10⁻⁵</code>), followed by 101 simultaneous gradient descent iterations.
+              </p>
+              <ul class="card-list">
+                <li>Strict separation of analytical calculus formulas into a single isolated routine</li>
+                <li>Simultaneous multi-parameter update verified against sequential mutation bug</li>
+                <li>Strict monotonic loss reduction confirmed from <code class="num">1.1825</code> down to <code class="num">1.08×10⁻²⁰</code></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="section" id="architecture">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">System Architecture</div>
+          <h2 class="section-title">Decoupled Three-Tier Architecture</h2>
+          <p class="section-desc">
+            The Workbench enforces a strict separation of concerns between native OS lifecycle management, pure computational physics, and modern accelerated graphics rendering.
+          </p>
+        </div>
+
+        <div class="arch-card">
+          <div class="arch-svg-container">
+            <!-- Inline SVG System Architecture Diagram -->
+            <svg viewBox="0 0 960 380" width="960" height="380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13">
+              <defs>
+                <linearGradient id="gradHost" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1e293b"/>
+                  <stop offset="100%" stop-color="#0f172a"/>
+                </linearGradient>
+                <linearGradient id="gradCore" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1e3a5f"/>
+                  <stop offset="100%" stop-color="#0c2340"/>
+                </linearGradient>
+                <linearGradient id="gradUI" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1f2937"/>
+                  <stop offset="100%" stop-color="#111827"/>
+                </linearGradient>
+                <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8"/>
+                </marker>
+              </defs>
+
+              <!-- Group 1: Native Win32 Host Shell -->
+              <rect x="20" y="30" width="260" height="320" rx="8" fill="url(#gradHost)" stroke="#3e434f" stroke-width="1.5"/>
+              <text x="35" y="60" fill="#38bdf8" font-weight="700" font-size="14">Native Host Tier (src/host)</text>
+              <rect x="35" y="80" width="230" height="55" rx="5" fill="#202228" stroke="#525867" stroke-width="1"/>
+              <text x="50" y="105" fill="#f0f2f5" font-weight="600">Launch.exe</text>
+              <text x="50" y="123" fill="#9da3b4" font-size="11">Win32 Entry &amp; Named Mutex</text>
+
+              <rect x="35" y="150" width="230" height="55" rx="5" fill="#202228" stroke="#525867" stroke-width="1"/>
+              <text x="50" y="175" fill="#f0f2f5" font-weight="600">Microsoft Edge WebView2</text>
+              <text x="50" y="193" fill="#9da3b4" font-size="11">Embedded Desktop Window Frame</text>
+
+              <rect x="35" y="220" width="230" height="55" rx="5" fill="#202228" stroke="#525867" stroke-width="1"/>
+              <text x="50" y="245" fill="#f0f2f5" font-weight="600">Browser Fallback Engine</text>
+              <text x="50" y="263" fill="#9da3b4" font-size="11">ShellExecuteW default browser</text>
+
+              <rect x="35" y="290" width="230" height="45" rx="5" fill="#15161a" stroke="#2e313a" stroke-width="1"/>
+              <text x="50" y="318" fill="#646a7c" font-size="11">Token Generator (Crypto Random)</text>
+
+              <!-- Arrow Host to Core -->
+              <path d="M 280 190 L 340 190" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+              <text x="290" y="180" fill="#9da3b4" font-size="10">Spawns</text>
+
+              <!-- Group 2: Embedded C++ Core & Server -->
+              <rect x="350" y="30" width="280" height="320" rx="8" fill="url(#gradCore)" stroke="#0284c7" stroke-width="1.5"/>
+              <text x="365" y="60" fill="#38bdf8" font-weight="700" font-size="14">C++17 Engine Tier (src/core &amp; server)</text>
+
+              <rect x="365" y="80" width="250" height="50" rx="5" fill="#18191e" stroke="#0284c7" stroke-width="1"/>
+              <text x="380" y="103" fill="#f0f2f5" font-weight="600">Loopback HTTP Server</text>
+              <text x="380" y="120" fill="#9da3b4" font-size="11">cpp-httplib | Ephemeral Port | Bearer Auth</text>
+
+              <rect x="365" y="140" width="250" height="45" rx="5" fill="#202228" stroke="#3e434f" stroke-width="1"/>
+              <text x="380" y="162" fill="#f0f2f5" font-weight="600">1D Thermal FEA Solver</text>
+              <text x="380" y="177" fill="#9da3b4" font-size="11">Galerkin Method + Thomas Algorithm</text>
+
+              <rect x="365" y="195" width="250" height="45" rx="5" fill="#202228" stroke="#3e434f" stroke-width="1"/>
+              <text x="380" y="217" fill="#f0f2f5" font-weight="600">Parallel Batch Thread Pool</text>
+              <text x="380" y="232" fill="#9da3b4" font-size="11">Atomic Work-Stealing + SplitMix64 PRNG</text>
+
+              <rect x="365" y="250" width="250" height="45" rx="5" fill="#202228" stroke="#3e434f" stroke-width="1"/>
+              <text x="380" y="272" fill="#f0f2f5" font-weight="600">Supervisory Device Mocks</text>
+              <text x="380" y="287" fill="#ef4444" font-size="11">MCU, FPGA, JTAG (SIMULATED)</text>
+
+              <rect x="365" y="305" width="250" height="35" rx="5" fill="#202228" stroke="#3e434f" stroke-width="1"/>
+              <text x="380" y="327" fill="#f0f2f5" font-weight="600" font-size="11">Backprop Engine &amp; Gradient Check</text>
+
+              <!-- Arrow Core to UI -->
+              <path d="M 630 190 L 690 190" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+              <text x="635" y="180" fill="#9da3b4" font-size="10">REST API</text>
+
+              <!-- Group 3: Operator UI Console -->
+              <rect x="700" y="30" width="240" height="320" rx="8" fill="url(#gradUI)" stroke="#3e434f" stroke-width="1.5"/>
+              <text x="715" y="60" fill="#38bdf8" font-weight="700" font-size="14">Operator UI (src/ui)</text>
+
+              <rect x="715" y="80" width="210" height="45" rx="5" fill="#202228" stroke="#525867" stroke-width="1"/>
+              <text x="728" y="102" fill="#f0f2f5" font-weight="600">React 18 + TypeScript</text>
+              <text x="728" y="117" fill="#9da3b4" font-size="11">Component Tree &amp; State Stores</text>
+
+              <rect x="715" y="135" width="210" height="45" rx="5" fill="#202228" stroke="#525867" stroke-width="1"/>
+              <text x="728" y="157" fill="#f0f2f5" font-weight="600">Three.js WebGL Engine</text>
+              <text x="728" y="172" fill="#9da3b4" font-size="11">3D Surface &amp; Point Cloud Viewports</text>
+
+              <rect x="715" y="190" width="210" height="45" rx="5" fill="#202228" stroke="#525867" stroke-width="1"/>
+              <text x="728" y="212" fill="#f0f2f5" font-weight="600">Plotly.js Scientific Charts</text>
+              <text x="728" y="227" fill="#9da3b4" font-size="11">Temperature Profiles &amp; Scaling Curves</text>
+
+              <rect x="715" y="245" width="210" height="45" rx="5" fill="#202228" stroke="#525867" stroke-width="1"/>
+              <text x="728" y="267" fill="#f0f2f5" font-weight="600">Hardware &amp; Fault Timeline</text>
+              <text x="728" y="282" fill="#9da3b4" font-size="11">State Badges &amp; Timeout Simulators</text>
+
+              <rect x="715" y="300" width="210" height="40" rx="5" fill="#15161a" stroke="#2e313a" stroke-width="1"/>
+              <text x="728" y="324" fill="#646a7c" font-size="11">WCAG AA Contrast &amp; Focus System</text>
+            </svg>
+          </div>
+          <p class="card-text" style="margin-top: 1rem;">
+            Communication between the WebGL operator console and the native engine occurs exclusively over loopback sockets (<code class="num">127.0.0.1</code>) on an operating system-assigned ephemeral port. A single-use, 256-bit cryptographically secure session token prevents cross-origin or local process intrusion.
+          </p>
+        </div>
+
+        <!-- Embedded Topology Block Diagram -->
+        <div class="arch-card">
+          <h3 class="card-title" style="margin-bottom: 0.5rem;">Simulated Embedded System Topology</h3>
+          <p class="card-text" style="margin-bottom: 1rem;">
+            Phase 6 models supervisory communication across three target embedded controllers over simulated USB-UART and USB-JTAG bridges. All interactions operate purely in software simulation.
+          </p>
+          <div class="arch-svg-container">
+            <img src="img/embedded_block_diagram.svg" alt="Simulated embedded block diagram showing Host PC, Olimex JTAG adapter, ESP32 MCU, and Arty A7 FPGA" style="max-width: 100%; height: auto;" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Verified Results Section -->
+    <section class="section" id="results">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Empirical Verification</div>
+          <h2 class="section-title">Verified Benchmark &amp; Physics Results</h2>
+          <p class="section-desc">
+            All numerical values below are quoted verbatim from test execution outputs recorded in <code class="num">results/</code> and <code class="num">docs/</code>. No fabricated or estimated metrics are presented anywhere in this project.
+          </p>
+        </div>
+
+        <!-- Table 1: FEA Convergence -->
+        <h3 class="card-title">1. Finite Element Thermal Convergence &amp; Discretization Error <span class="source-tag">Source: results/convergence.csv</span></h3>
+        <p class="card-text">
+          Conducted for steady-state rod heat conduction with length <code class="num">L = 1.0 m</code>, thermal conductivity <code class="num">k = 50.0 W/(m·K)</code>, heat generation rate <code class="num">q = 5,000 W/m³</code>, and Dirichlet boundary temperatures <code class="num">T(0) = 100.0 °C</code>, <code class="num">T(L) = 200.0 °C</code>.
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Elements (<code class="num">N</code>)</th>
+                <th scope="col">Mesh Step <code class="num">h</code> (m)</th>
+                <th scope="col">Max Nodal Error (°C)</th>
+                <th scope="col">Max Midpoint Error (°C)</th>
+                <th scope="col">Observed Spatial Order</th>
+                <th scope="col">Theoretical Rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="num">10</td>
+                <td class="num">0.1000</td>
+                <td class="num">5.68434 × 10⁻¹⁴</td>
+                <td class="num">1.250000</td>
+                <td class="num">N/A (base mesh)</td>
+                <td><code class="num">O(h²)</code> quadratic</td>
+              </tr>
+              <tr>
+                <td class="num">20</td>
+                <td class="num">0.0500</td>
+                <td class="num">2.55795 × 10⁻¹³</td>
+                <td class="num">0.312500</td>
+                <td class="num"><strong>2.000</strong></td>
+                <td><code class="num">O(h²)</code> quadratic</td>
+              </tr>
+              <tr>
+                <td class="num">40</td>
+                <td class="num">0.0250</td>
+                <td class="num">7.67386 × 10⁻¹³</td>
+                <td class="num">0.078125</td>
+                <td class="num"><strong>2.000</strong></td>
+                <td><code class="num">O(h²)</code> quadratic</td>
+              </tr>
+              <tr>
+                <td class="num">80</td>
+                <td class="num">0.0125</td>
+                <td class="num">1.13687 × 10⁻¹²</td>
+                <td class="num">0.019531</td>
+                <td class="num"><strong>2.000</strong></td>
+                <td><code class="num">O(h²)</code> quadratic</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="card-text" style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 2.5rem;">
+          <em>Note:</em> For linear 1D elements under constant source terms, the finite element solution matches the exact analytical Dirichlet solution identically at all mesh nodes down to IEEE 754 floating-point machine precision (<code class="num">~10⁻¹⁴</code> to <code class="num">10⁻¹² °C</code>). Element midpoint errors exhibit exact quadratic asymptotic reduction with observed order <code class="num">2.000</code>.
+        </p>
+
+        <!-- Table 2: Multicore Benchmark -->
+        <h3 class="card-title">2. Multicore Parallel Batch Benchmark Scaling <span class="source-tag">Source: docs/REPORT.md &amp; docs/PERFORMANCE_NOTES.md</span></h3>
+        <p class="card-text">
+          Measured on <strong>AMD Ryzen 7 5800H</strong> (8 physical cores, 16 logical threads, 3.2 GHz base / 4.4 GHz boost), 16 GB DDR4 RAM, Windows 10 Home 26H2, MSVC 19.44 Release build (<code class="num">/O2 /Oi /Ot /Oy /GL</code>). Workload: <strong>50,000 independent rod cases</strong> (<code class="num">N = 10</code> elements, 11 nodes per case, total 550,000 solved nodes per repetition). Case generation time (<code class="num">78.51 ms</code>) is strictly excluded from compute metrics.
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Workers (<code class="num">p</code>)</th>
+                <th scope="col">Rep 1 (ms)</th>
+                <th scope="col">Rep 2 (ms)</th>
+                <th scope="col">Rep 3 (ms)</th>
+                <th scope="col">Rep 4 (ms)</th>
+                <th scope="col">Rep 5 (ms)</th>
+                <th scope="col">Median <code class="num">T_p</code></th>
+                <th scope="col">Speedup (<code class="num">S_p</code>)</th>
+                <th scope="col">Efficiency (<code class="num">E_p</code>)</th>
+                <th scope="col">Max <code class="num">|ΔT|</code> vs Serial</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="num">1</td>
+                <td class="num">42.56</td>
+                <td class="num">42.17</td>
+                <td class="num">41.93</td>
+                <td class="num">42.12</td>
+                <td class="num">41.24</td>
+                <td class="num"><strong>42.12 ms</strong></td>
+                <td class="num">1.00×</td>
+                <td class="num">100.0%</td>
+                <td class="num">0.000000 °C</td>
+              </tr>
+              <tr>
+                <td class="num">2</td>
+                <td class="num">26.41</td>
+                <td class="num">25.81</td>
+                <td class="num">25.15</td>
+                <td class="num">25.18</td>
+                <td class="num">39.69</td>
+                <td class="num"><strong>25.81 ms</strong></td>
+                <td class="num"><strong>1.63×</strong></td>
+                <td class="num">81.6%</td>
+                <td class="num">0.000000 °C</td>
+              </tr>
+              <tr>
+                <td class="num">4</td>
+                <td class="num">16.19</td>
+                <td class="num">15.21</td>
+                <td class="num">14.69</td>
+                <td class="num">14.11</td>
+                <td class="num">14.14</td>
+                <td class="num"><strong>14.69 ms</strong></td>
+                <td class="num"><strong>2.87×</strong></td>
+                <td class="num">71.7%</td>
+                <td class="num">0.000000 °C</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="card-text" style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 2.5rem;">
+          <em>Analysis:</em> Individual rod solves execute in approx. <code class="num">840 ns</code> (<code class="num">42.12 ms / 50,000</code>). At this granularity, OS thread pool lifecycle overhead (<code class="num">std::thread</code> spawning and joins) and atomic work-stealing counter contention bound scaling. Absolute agreement between serial and parallel solutions is exact (<code class="num">0.0 °C</code> across all 550,000 nodes).
+        </p>
+
+        <!-- Table 3: Backprop Gradient Check -->
+        <h3 class="card-title">3. Analytical vs. Numerical Gradient Check <span class="source-tag">Source: docs/BACKPROP_NOTES.md &amp; results/backprop.csv</span></h3>
+        <p class="card-text">
+          Evaluated at initial parameter vector <code class="num">θ₀ = [w=0.5, b=0.0, v=1.0, c=0.0]ᵀ</code> with fixed input <code class="num">x = 1.0</code>, target <code class="num">y = 2.0</code>, initial loss <code class="num">J₀ = 1.1825418189970167</code>, and finite difference perturbation <code class="num">ε = 10⁻⁶</code>. Required absolute error tolerance is <code class="num">|Δ| ≤ 10⁻⁵</code>.
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Parameter (<code class="num">θ</code>)</th>
+                <th scope="col">Analytic Formula <code class="num">∂J/∂θ</code></th>
+                <th scope="col">Central Difference Approximation</th>
+                <th scope="col">Absolute Error</th>
+                <th scope="col">Tolerance</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Weight <code class="num">w</code></strong> (Input-to-hidden)</td>
+                <td class="num">-1.2094644752</td>
+                <td class="num">-1.2094644751</td>
+                <td class="num">1.13 × 10⁻¹⁰</td>
+                <td class="num">≤ 1.0 × 10⁻⁵</td>
+                <td><span class="card-badge badge-green">PASS</span></td>
+              </tr>
+              <tr>
+                <td><strong>Bias <code class="num">b</code></strong> (Hidden unit)</td>
+                <td class="num">-1.2094644752</td>
+                <td class="num">-1.2094644751</td>
+                <td class="num">1.13 × 10⁻¹⁰</td>
+                <td class="num">≤ 1.0 × 10⁻⁵</td>
+                <td><span class="card-badge badge-green">PASS</span></td>
+              </tr>
+              <tr>
+                <td><strong>Weight <code class="num">v</code></strong> (Hidden-to-output)</td>
+                <td class="num">-0.7106820475</td>
+                <td class="num">-0.7106820474</td>
+                <td class="num">5.25 × 10⁻¹¹</td>
+                <td class="num">≤ 1.0 × 10⁻⁵</td>
+                <td><span class="card-badge badge-green">PASS</span></td>
+              </tr>
+              <tr>
+                <td><strong>Bias <code class="num">c</code></strong> (Output unit)</td>
+                <td class="num">-1.5378828427</td>
+                <td class="num">-1.5378828426</td>
+                <td class="num">1.12 × 10⁻¹⁰</td>
+                <td class="num">≤ 1.0 × 10⁻⁵</td>
+                <td><span class="card-badge badge-green">PASS</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="card-text" style="font-size: 0.875rem; color: var(--text-muted);">
+          <em>Trajectory:</em> First simultaneous update shifts parameters to <code class="num">w₁ = 0.620946, b₁ = 0.120946, v₁ = 1.071068, c₁ = 0.153788</code>, reducing loss to <code class="num">J₁ = 0.685774</code>. Across 101 gradient descent steps (<code class="num">η = 0.1</code>), loss decreases strictly monotonically, reaching <code class="num">J₁₀₁ = 1.080498 × 10⁻²⁰</code>.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Execution & Prerequisites Section -->
+    <section class="section" id="running">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Execution Guide</div>
+          <h2 class="section-title">How to Run the Workbench</h2>
+          <p class="section-desc">
+            The application is packaged as a zero-dependency portable Windows executable with an integrated launcher.
+          </p>
+        </div>
+
+        <div class="guide-grid">
+
+          <div class="guide-panel">
+            <h3>Prerequisites &amp; Compatibility</h3>
+            <ul class="steps-list" style="list-style: none; padding-left: 0;">
+              <li><strong>Operating System:</strong> 64-bit Windows 11 or Windows 10 (Build 19044+).</li>
+              <li><strong>Runtime Component:</strong> Microsoft Edge WebView2 Runtime (pre-installed by default on modern Windows 10/11 installations).</li>
+              <li><strong>Hardware Requirements:</strong> Standard x86-64 CPU (minimum 2 physical cores recommended for parallel solver scaling), 4 GB RAM, WebGL 2.0 compatible graphics driver.</li>
+              <li><strong>Admin Rights:</strong> Not required. Runs entirely within standard user privileges.</li>
+            </ul>
+
+            <div class="callout callout-info">
+              <strong>Single-Instance Mutex:</strong> If <code class="num">Launch.exe</code> is executed while an existing instance is active, the secondary process detects the Win32 named mutex, brings the existing window to the foreground, and exits immediately.
+            </div>
+          </div>
+
+          <div class="guide-panel">
+            <h3>One-Click Launch Instructions</h3>
+            <ol class="steps-list">
+              <li>
+                <strong>Extract the Archive:</strong><br>
+                Extract <code class="num">CandidateID_Workbench.zip</code> into any local directory (e.g. <code class="num">Desktop</code> or <code class="num">C:\Workbench</code>).
+              </li>
+              <li>
+                <strong>Launch Application:</strong><br>
+                Double-click <code class="num">Launch.exe</code> in the root of the extracted folder.
+              </li>
+              <li>
+                <strong>Observe Startup:</strong><br>
+                The native host starts the background core engine and opens the embedded instrument interface within milliseconds.
+              </li>
+            </ol>
+
+            <div class="callout callout-warning">
+              <strong>Windows Defender SmartScreen Notice:</strong><br>
+              Because this assignment build is freshly compiled and not signed with an enterprise commercial certificate, Windows SmartScreen may show <em>"Windows protected your PC"</em>.<br>
+              To run: click <strong>"More info"</strong>, then click <strong>"Run anyway"</strong>.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Honest Known Limitations Section -->
+    <section class="section" id="limitations">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Engineering Boundaries</div>
+          <h2 class="section-title">Honest Known Technical Limitations</h2>
+          <p class="section-desc">
+            Transparent record of real system boundaries, physical constraints, and architectural scopes as documented in <code class="num">docs/KNOWN_LIMITATIONS.md</code>.
+          </p>
+        </div>
+
+        <div class="limit-list">
+
+          <div class="limit-item">
+            <div class="limit-title">
+              <span>1. ASCII STL File Bounds &amp; Format Scope</span>
+              <span class="source-tag">64 MiB / 2M Triangles</span>
+            </div>
+            <div class="limit-desc">
+              The 3D geometry parser strictly accepts ASCII STL up to 64 MiB and 2,000,000 facets to prevent memory allocation spikes. Files detected as Binary STL (via 80-byte header checks and null-byte inspection) are rejected with an explicit prompt to re-export as ASCII STL.
+            </div>
+          </div>
+
+          <div class="limit-item">
+            <div class="limit-title">
+              <span>2. Single-Core Virtualized Scaling Boundary</span>
+              <span class="source-tag">Hardware Concurrency == 1</span>
+            </div>
+            <div class="limit-desc">
+              On virtual machines or cloud containers equipped with only 1 logical core, multithreaded worker pools incur context-switching penalties, resulting in speedup slightly below 1.0×. The Performance view detects single-core topologies and renders an honest disclosure banner explaining that parallel execution cannot achieve theoretical speedup without independent hardware units.
+            </div>
+          </div>
+
+          <div class="limit-item">
+            <div class="limit-title">
+              <span>3. Sandboxed Execution &amp; Loopback Network Sockets</span>
+              <span class="source-tag">127.0.0.1 Ephemeral Port</span>
+            </div>
+            <div class="limit-desc">
+              The host shell communicates with the core engine over loopback TCP using an ephemeral port and bearer authentication. In tightly restricted enterprise environments where low-integrity sandbox policies prohibit socket binding on localhost, elevated execution or explicit loopback whitelisting is required.
+            </div>
+          </div>
+
+          <div class="limit-item">
+            <div class="limit-title">
+              <span>4. Scope of Hardware View Devices</span>
+              <span class="source-tag">SIMULATED Software Mocks</span>
+            </div>
+            <div class="limit-desc">
+              MCU, FPGA, and JTAG adapters in the Hardware view are high-fidelity software state machines designed to test connection lifecycles, fault handling, and supervisory backoff recovery. The system does not bundle physical FTDI or WinUSB kernel drivers, and all telemetry cards are persistently badged SIMULATED.
+            </div>
+          </div>
+
+          <div class="limit-item">
+            <div class="limit-title">
+              <span>5. 1-D Thermal FEA vs. 3-D Spatial Geometry</span>
+              <span class="source-tag">Longitudinal Formulation</span>
+            </div>
+            <div class="limit-desc">
+              The 3D Geometry Viewer displays 3D surface meshes (STL) and spatial coordinates (CSV), while the thermal engine solves the governing steady-state 1-D conduction equation along the longitudinal axis. The interface maintains strict conceptual separation between 3D spatial inspection and 1-D thermal physics.
+            </div>
+          </div>
+
+          <div class="limit-item">
+            <div class="limit-title">
+              <span>6. Provisional Analytical Backpropagation Formulas</span>
+              <span class="source-tag">Provisional AI Calculus</span>
+            </div>
+            <div class="limit-desc">
+              Analytical gradient formulas implemented in <code class="num">analytic_gradients()</code> are provisional implementations verified against finite-difference checks. The candidate's handwritten mathematical derivation is conducted independently and compared prior to final submission.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>Unified Engineering Workbench</strong> &bull; Static Project Page &bull; Excluded from Distributable ZIP
+      </div>
+      <div>
+        Built with Pure Semantic HTML5 &amp; CSS &bull; Zero External Network Requests &bull; WCAG AA Compliant
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
