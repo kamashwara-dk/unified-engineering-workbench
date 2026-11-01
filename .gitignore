@@ -1,0 +1,28 @@
+# Build output
+/build/
+/out/
+/dist/
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exe
+!Launch.exe.manifest
+# Frontend
+node_modules/
+src/ui/dist/
+# IDE / OS
+.vs/
+.idea/
+*.user
+Thumbs.db
+.DS_Store
+# Local secrets / machine config (never commit)
+.env
+*.local
+# Packaged release staging (the ZIP is built from /dist, not committed)
+*.zip
+CandidateID_Workbench.zip
+
+# Generated stress test files from limits testing
+data/stress/

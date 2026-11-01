@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- docs/img/embedded_block_diagram.svg
+     Embedded system block diagram for the Unified Engineering Workbench.
+     Hand-authored SVG.  ALL CONNECTIONS SHOWN ARE SIMULATED IN SOFTWARE.
+     Electrical values (voltages, currents, pin numbers) depend on specific
+     board datasheets and are NOT shown; see docs/EMBEDDED_DESIGN.md.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480"
+     width="780" height="480" font-family="monospace" font-size="12">
+
+  <!-- Background -->
+  <rect width="780" height="480" fill="#1a1a2e" rx="8"/>
+
+  <!-- Title -->
+  <text x="390" y="24" text-anchor="middle" fill="#e0e0e0" font-size="14" font-weight="bold">
+    Embedded System Block Diagram (SIMULATED)
+  </text>
+
+  <!-- Host PC -->
+  <rect x="20" y="50" width="140" height="80" fill="#2a2a4a" stroke="#4fc3f7" stroke-width="1.5" rx="4"/>
+  <text x="90" y="86" text-anchor="middle" fill="#4fc3f7" font-weight="bold">Host PC</text>
+  <text x="90" y="103" text-anchor="middle" fill="#aaa" font-size="10">Workbench app</text>
+  <text x="90" y="118" text-anchor="middle" fill="#aaa" font-size="10">USB host port(s)</text>
+
+  <!-- Olimex ARM-USB-TINY-H (JTAG adapter) -->
+  <rect x="220" y="50" width="160" height="80" fill="#2a3a2a" stroke="#81c784" stroke-width="1.5" rx="4"/>
+  <text x="300" y="82" text-anchor="middle" fill="#81c784" font-weight="bold">JTAG Adapter</text>
+  <text x="300" y="99" text-anchor="middle" fill="#aaa" font-size="10">Olimex ARM-USB-TINY-H</text>
+  <text x="300" y="114" text-anchor="middle" fill="#ef9a9a" font-size="10">(SIMULATED)</text>
+
+  <!-- ESP32-DevKitC (MCU) -->
+  <rect x="220" y="200" width="160" height="100" fill="#3a2a2a" stroke="#ef9a9a" stroke-width="1.5" rx="4"/>
+  <text x="300" y="232" text-anchor="middle" fill="#ef9a9a" font-weight="bold">MCU Board</text>
+  <text x="300" y="249" text-anchor="middle" fill="#aaa" font-size="10">ESP32-DevKitC</text>
+  <text x="300" y="266" text-anchor="middle" fill="#aaa" font-size="10">USB-UART bridge</text>
+  <text x="300" y="283" text-anchor="middle" fill="#ef9a9a" font-size="10">(SIMULATED)</text>
+
+  <!-- Arty A7-35T (FPGA) -->
+  <rect x="500" y="200" width="160" height="100" fill="#2a2a3a" stroke="#ce93d8" stroke-width="1.5" rx="4"/>
+  <text x="580" y="232" text-anchor="middle" fill="#ce93d8" font-weight="bold">FPGA Board</text>
+  <text x="580" y="249" text-anchor="middle" fill="#aaa" font-size="10">Digilent Arty A7-35T</text>
+  <text x="580" y="266" text-anchor="middle" fill="#aaa" font-size="10">JTAG (Digilent USB)</text>
+  <text x="580" y="283" text-anchor="middle" fill="#ce93d8" font-size="10">(SIMULATED)</text>
+
+  <!-- Power supply note -->
+  <rect x="500" y="50" width="160" height="80" fill="#2a2a2a" stroke="#ffcc02" stroke-width="1.5" rx="4" stroke-dasharray="4,2"/>
+  <text x="580" y="82" text-anchor="middle" fill="#ffcc02" font-weight="bold">Power / GND</text>
+  <text x="580" y="99" text-anchor="middle" fill="#aaa" font-size="10">[VERIFY: datasheet]</text>
+  <text x="580" y="114" text-anchor="middle" fill="#aaa" font-size="10">V domains, GND first</text>
+
+  <!-- USB link: Host -> JTAG adapter -->
+  <line x1="160" y1="90" x2="220" y2="90" stroke="#4fc3f7" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="190" y="82" text-anchor="middle" fill="#4fc3f7" font-size="10">USB</text>
+
+  <!-- USB link: Host -> MCU -->
+  <line x1="90" y1="130" x2="90" y2="240" stroke="#4fc3f7" stroke-width="1.5"/>
+  <line x1="90" y1="240" x2="220" y2="240" stroke="#4fc3f7" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="140" y="236" text-anchor="middle" fill="#4fc3f7" font-size="10">USB-UART</text>
+
+  <!-- USB link: Host -> FPGA (via Digilent) -->
+  <line x1="90" y1="130" x2="90" y2="380" stroke="#4fc3f7" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="90" y1="380" x2="580" y2="380" stroke="#4fc3f7" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="580" y1="380" x2="580" y2="300" stroke="#4fc3f7" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arrow)"/>
+  <text x="335" y="396" text-anchor="middle" fill="#4fc3f7" font-size="10">USB (Digilent JTAG)</text>
+
+  <!-- JTAG signals: JTAG adapter -> MCU target connector -->
+  <line x1="300" y1="130" x2="300" y2="200" stroke="#81c784" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="330" y="168" fill="#81c784" font-size="10">TCK,TMS</text>
+  <text x="330" y="180" fill="#81c784" font-size="10">TDI,TDO</text>
+  <text x="330" y="192" fill="#81c784" font-size="10">VREF</text>
+
+  <!-- JTAG to FPGA (optional path, shown dashed) -->
+  <line x1="380" y1="90" x2="500" y2="90" stroke="#81c784" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="500" y1="90" x2="500" y2="240" stroke="#81c784" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="500" y1="240" x2="500" y2="250" stroke="#81c784" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arrow)"/>
+  <text x="460" y="82" text-anchor="middle" fill="#81c784" font-size="10">JTAG (alt)</text>
+
+  <!-- Voltage domain note on JTAG adapter -->
+  <rect x="220" y="155" width="160" height="32" fill="#1e2a1e" stroke="#81c784" stroke-width="1" rx="2"/>
+  <text x="300" y="170" text-anchor="middle" fill="#81c784" font-size="10">Level shift [VERIFY]</text>
+  <text x="300" y="182" text-anchor="middle" fill="#aaa" font-size="9">Target V domain unknown</text>
+
+  <!-- Ground common rail -->
+  <line x1="300" y1="420" x2="580" y2="420" stroke="#888" stroke-width="2"/>
+  <text x="440" y="438" text-anchor="middle" fill="#888" font-size="10">Common GND (connect first)</text>
+  <line x1="300" y1="420" x2="300" y2="300" stroke="#888" stroke-width="1.5" stroke-dasharray="2,2"/>
+  <line x1="580" y1="420" x2="580" y2="300" stroke="#888" stroke-width="1.5" stroke-dasharray="2,2"/>
+
+  <!-- Legend -->
+  <rect x="20" y="390" width="180" height="80" fill="#111" stroke="#444" stroke-width="1" rx="4"/>
+  <text x="30" y="408" fill="#e0e0e0" font-size="11" font-weight="bold">Legend</text>
+  <line x1="30" y1="420" x2="60" y2="420" stroke="#4fc3f7" stroke-width="2"/>
+  <text x="65" y="424" fill="#aaa" font-size="10">USB link</text>
+  <line x1="30" y1="435" x2="60" y2="435" stroke="#81c784" stroke-width="2"/>
+  <text x="65" y="439" fill="#aaa" font-size="10">JTAG signals</text>
+  <line x1="30" y1="450" x2="60" y2="450" stroke="#4fc3f7" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="65" y="454" fill="#aaa" font-size="10">Alt / indirect path</text>
+  <line x1="30" y1="465" x2="60" y2="465" stroke="#888" stroke-width="1.5" stroke-dasharray="2,2"/>
+  <text x="65" y="469" fill="#aaa" font-size="10">GND rail</text>
+
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#aaa"/>
+    </marker>
+  </defs>
+</svg>

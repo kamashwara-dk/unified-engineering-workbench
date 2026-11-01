@@ -1,0 +1,30 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 24, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "dev",
+      "displayName": "Ninja (any platform, uses the compiler on PATH)",
+      "generator": "Ninja Multi-Config",
+      "binaryDir": "${sourceDir}/build/dev"
+    },
+    {
+      "name": "vs2022",
+      "displayName": "Visual Studio 2022 x64 (Windows 11 target)",
+      "generator": "Visual Studio 17 2022",
+      "architecture": { "value": "x64", "strategy": "set" },
+      "binaryDir": "${sourceDir}/build/vs2022"
+    }
+  ],
+  "buildPresets": [
+    { "name": "dev-release", "configurePreset": "dev", "configuration": "Release" },
+    { "name": "dev-debug", "configurePreset": "dev", "configuration": "Debug" },
+    { "name": "vs2022-release", "configurePreset": "vs2022", "configuration": "Release" }
+  ],
+  "testPresets": [
+    { "name": "dev-debug", "configurePreset": "dev", "configuration": "Debug",
+      "output": { "outputOnFailure": true } },
+    { "name": "vs2022-release", "configurePreset": "vs2022", "configuration": "Release",
+      "output": { "outputOnFailure": true } }
+  ]
+}

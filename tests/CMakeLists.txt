@@ -1,0 +1,38 @@
+add_executable(core_tests test_smoke.cpp)
+target_link_libraries(core_tests PRIVATE workbench_core catch2_amalgamated)
+wb_set_warnings(core_tests)
+add_test(NAME core_tests COMMAND core_tests)
+
+add_executable(server_tests test_server.cpp)
+target_link_libraries(server_tests PRIVATE workbench_server_lib catch2_amalgamated)
+wb_set_warnings(server_tests)
+add_test(NAME server_tests COMMAND server_tests)
+
+add_executable(fem1d_tests test_fem1d.cpp)
+target_link_libraries(fem1d_tests PRIVATE workbench_core catch2_amalgamated)
+wb_set_warnings(fem1d_tests)
+add_test(NAME fem1d_tests COMMAND fem1d_tests)
+
+add_executable(job_tests test_jobs.cpp)
+target_link_libraries(job_tests PRIVATE workbench_server_lib catch2_amalgamated)
+wb_set_warnings(job_tests)
+add_test(NAME job_tests COMMAND job_tests)
+
+add_executable(geometry_tests test_geometry_io.cpp)
+target_link_libraries(geometry_tests PRIVATE workbench_core catch2_amalgamated)
+wb_set_warnings(geometry_tests)
+add_test(NAME geometry_tests COMMAND geometry_tests)
+
+add_executable(batch_tests test_batch.cpp)
+target_link_libraries(batch_tests PRIVATE workbench_core workbench_platform catch2_amalgamated)
+wb_set_warnings(batch_tests)
+add_test(NAME batch_tests COMMAND batch_tests)
+add_executable(device_tests test_devices.cpp)
+target_link_libraries(device_tests PRIVATE workbench_core catch2_amalgamated)
+wb_set_warnings(device_tests)
+add_test(NAME device_tests COMMAND device_tests)
+
+add_executable(backprop_tests test_backprop.cpp)
+target_link_libraries(backprop_tests PRIVATE workbench_core catch2_amalgamated)
+wb_set_warnings(backprop_tests)
+add_test(NAME backprop_tests COMMAND backprop_tests)

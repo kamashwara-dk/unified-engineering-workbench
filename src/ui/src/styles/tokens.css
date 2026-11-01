@@ -1,0 +1,117 @@
+/* Workbench Design System Tokens
+   Graphite neutrals + precision cyan accent, semantic status colours.
+   Engineering bench instrument aesthetic.
+*/
+
+:root {
+  /* Color Palette - Graphite Neutrals (Dark Theme Default) */
+  --bg-canvas: #111215;
+  --bg-panel: #18191e;
+  --bg-card: #202228;
+  --bg-subtle: #292c34;
+  --bg-input: #15161a;
+
+  --border-subtle: #2e313a;
+  --border-default: #3e434f;
+  --border-strong: #525867;
+
+  --text-primary: #f0f2f5;
+  --text-secondary: #a3a9b8;
+  --text-muted: #8e95a5;
+  --text-disabled: #5a6070;
+
+  /* Accent - Electric Instrument Cyan */
+  --accent-subtle: rgba(14, 165, 233, 0.12);
+  --accent-default: #38bdf8;
+  --accent-hover: #7dd3fc;
+  --accent-active: #bae6fd;
+  --accent-fg: #0f172a;
+  --accent-glow: rgba(56, 189, 248, 0.35);
+
+  /* Semantic Status Colors */
+  --color-success: #10b981;
+  --color-success-bg: rgba(16, 185, 129, 0.12);
+  --color-success-border: rgba(16, 185, 129, 0.3);
+
+  --color-warning: #f59e0b;
+  --color-warning-bg: rgba(245, 158, 11, 0.12);
+  --color-warning-border: rgba(245, 158, 11, 0.3);
+
+  --color-error: #ef4444;
+  --color-error-bg: rgba(239, 68, 68, 0.14);
+  --color-error-border: rgba(239, 68, 68, 0.35);
+
+  --color-info: #38bdf8;
+  --color-info-bg: rgba(56, 189, 248, 0.12);
+  --color-info-border: rgba(56, 189, 248, 0.3);
+
+  /* Radii */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.45), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.35);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 2px #111215, 0 0 0 4px #38bdf8;
+}
+
+/* Optional Light Theme */
+.light {
+  --bg-canvas: #f4f5f7;
+  --bg-panel: #ffffff;
+  --bg-card: #f9fafb;
+  --bg-subtle: #f0f2f5;
+  --bg-input: #ffffff;
+
+  --border-subtle: #e2e5ea;
+  --border-default: #cbd0d8;
+  --border-strong: #9ca3af;
+
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #4b5563;
+  --text-disabled: #9ca3af;
+
+  --accent-subtle: rgba(2, 132, 199, 0.08);
+  --accent-default: #0369a1;
+  --accent-hover: #075985;
+  --accent-active: #0c4a6e;
+  --accent-fg: #ffffff;
+  --accent-glow: rgba(2, 132, 199, 0.25);
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  --focus-ring: 0 0 0 2px #ffffff, 0 0 0 4px #0284c7;
+}
+
+/* Tabular Numerals for every measured engineering value */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* Visible focus rings for keyboard accessibility */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* Accessibility: respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

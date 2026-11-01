@@ -1,0 +1,219 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "Run configure/build/ctest on Windows 11 with MSVC (`--preset vs2022`) and record the result": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513257905
+      },
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513269393
+      },
+      {
+        "executionId": "80cf8fc1-f9e2-4eec-b850-e33d24441fa1",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793515711100
+      }
+    ],
+    "Resolve [CONFIRM] items: candidate ID, board choices, size limits": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513258244
+      }
+    ],
+    "Install MCP servers and skills per docs/TOOLING_SETUP.md": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513258631
+      }
+    ],
+    "Pin + vendor cpp-httplib, nlohmann/json, WebView2 SDK; update third_party/VERSIONS.md": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513258979
+      },
+      {
+        "executionId": "dbbcdb9f-d718-43e7-bc30-9f5dde63aa6c",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793536629790
+      }
+    ],
+    "`/api/health`; loopback bind; random port; token": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513259263
+      },
+      {
+        "executionId": "dbbcdb9f-d718-43e7-bc30-9f5dde63aa6c",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793536643309
+      }
+    ],
+    "Win32 host + WebView2 + runtime check + browser fallback": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513259438
+      },
+      {
+        "executionId": "dbbcdb9f-d718-43e7-bc30-9f5dde63aa6c",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793536955991
+      }
+    ],
+    "Static runtime link; dist layout; zip script": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513259610
+      },
+      {
+        "executionId": "dbbcdb9f-d718-43e7-bc30-9f5dde63aa6c",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793536962910
+      }
+    ],
+    "Windows Sandbox launch x4; `tasks.json` \"Run Workbench\"": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513259753
+      }
+    ],
+    "Assembly + elimination BCs + Thomas solver": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513259899
+      },
+      {
+        "executionId": "dbbcdb9f-d718-43e7-bc30-9f5dde63aa6c",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793536968427
+      }
+    ],
+    "Exact solution, midpoint metric, convergence table, CSV export": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513260047
+      },
+      {
+        "executionId": "dbbcdb9f-d718-43e7-bc30-9f5dde63aa6c",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793536973924
+      }
+    ],
+    "Tests: oracle table, observed order, negative inputs": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513260198
+      },
+      {
+        "executionId": "dbbcdb9f-d718-43e7-bc30-9f5dde63aa6c",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793536980859
+      }
+    ],
+    "STL parser + tests (valid, malformed, NaN, binary, empty, truncated)": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513260340
+      },
+      {
+        "executionId": "dbbcdb9f-d718-43e7-bc30-9f5dde63aa6c",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793536986955
+      }
+    ],
+    "CSV parser + tests (header, columns, non-finite, duplicates, BOM/CRLF, empty)": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513260486
+      },
+      {
+        "executionId": "dbbcdb9f-d718-43e7-bc30-9f5dde63aa6c",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793537299592
+      }
+    ],
+    "C++ sample generators; data/ provenance; size-limit tests": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513260690
+      },
+      {
+        "executionId": "dbbcdb9f-d718-43e7-bc30-9f5dde63aa6c",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793537305924
+      }
+    ],
+    "Tokens + layout + four views; upload/validation UX; progress/cancel; exports": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513260829
+      }
+    ],
+    "Three.js STL + point cloud + legend + inspection; Plotly FEA plots": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513260966
+      }
+    ],
+    "Generator, serial + parallel runners, agreement check, benchmark harness, hardware report": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513261096
+      }
+    ],
+    "Performance view; launch-to-ready metric": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513261239
+      }
+    ],
+    "Adapters + failure/recovery; Hardware view; design doc + diagram + table": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513261368
+      }
+    ],
+    "Handwritten pages (candidate); C++ gradients + central-difference check; loss CSV + plot": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513261497
+      }
+    ],
+    "Negative-test sweep; ASan; accessibility; size-limit table; 4 clean launches": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513261620
+      }
+    ],
+    "README, report, video/walkthrough, AI log, ownership statement, git bundle + log, final ZIP, fresh-extract test": [
+      {
+        "executionId": "d6260141-79f0-4e06-9add-f2b4f8c86902",
+        "chatSessionId": "sess_9f8b7c6b-395a-458a-b1bd-494709a917a6",
+        "timestamp": 1793513261751
+      }
+    ]
+  }
+}
